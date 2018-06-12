@@ -1,4 +1,4 @@
-import mraa as m
+#import mraa as m
 import time
 
 import gpio
@@ -60,10 +60,10 @@ class SpiSerial():
         ret_val = self.rx_buf[0:num_bytes]
         del(self.rx_buf[0:num_bytes])
         return ret_val
-        
+
     def peek(self):
         return self.rx_buf[0]
-        
+
     def pop(self):
         return self.read(1)
 
